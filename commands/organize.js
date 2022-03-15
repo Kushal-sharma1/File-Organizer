@@ -33,9 +33,9 @@ function organize(srcpath) {
       //take extension
 
       let ext = allfiles[i].split(".")[1];
-      console.log(ext); //only for checking
+            //   console.log(ext); //only for checking
      let FolderName =FindFolder(ext);
-      console.log(FolderName);
+           //   console.log(FolderName);
      //copyFile from source to destination
      CopyFileTO(srcpath,fullPath,FolderName);
 
@@ -52,7 +52,7 @@ function FindFolder(ext){
         return key;
     }
   }
-
+ return "miscellaneous";
 }
 //copy function
 function CopyFileTO(srcpath,fullpath,folder){
@@ -70,4 +70,7 @@ fs.copyFileSync(fullpath,destFile);
 let mypath = process.cwd();
 console.log(mypath);
 mypath = path.join(mypath, "downloads");
-organize(mypath);
+
+module.exports={
+    organize :organize,
+}
