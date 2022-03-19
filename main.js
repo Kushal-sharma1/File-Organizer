@@ -3,10 +3,11 @@ let input =process.argv.slice(2);
 let command =input[0];
 let path =input[1];
 let helpFunc =require("./commands/help.js");
-let orgfunc =require("./commands/organize.js")
+let orgfunc =require("./commands/organize.js");
+let treefunc =require("./commands/tree.js")
 switch(command){
   case "tree":
-       //code
+        treefunc.tree(path);
         break;
   case "organize":
        orgfunc.organize(path);
