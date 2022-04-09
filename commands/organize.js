@@ -67,9 +67,9 @@ let destFile =path.join(destFolder,basename);
 fs.copyFileSync(fullpath,destFile);
 }
 
-let mypath = process.cwd();
-console.log(mypath);
-mypath = path.join(mypath, "downloads");
+// let mypath = process.cwd();
+// console.log(mypath);
+// mypath = path.join(mypath, "downloads");
 
 module.exports={
     organize :organize,
